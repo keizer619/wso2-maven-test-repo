@@ -4,7 +4,7 @@
 
     <groupId>org.kasung.test</groupId>
     <artifactId>mytest</artifactId>
-    <version>2.6.0-alpha2</version>
+    <version>2.6.0-alpha3-SNAPSHOT</version>
 
     <parent>
         <groupId>org.wso2</groupId>
@@ -16,7 +16,7 @@
         <url>https://github.com/kasunbg/crispy-giggle-prod.git</url>
         <developerConnection>scm:git:https://github.com/kasunbg/crispy-giggle-prod.git</developerConnection>
         <connection>scm:git:https://github.com/kasunbg/crispy-giggle-prod.git</connection>
-        <tag>v2.6.0-alpha2</tag>
+        <tag>HEAD</tag>
     </scm>
 
     <build>
