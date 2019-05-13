@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -o xtrace
+
 MAVEN_REPO=/tmp/testrepo
 clean_repo() {
   mkdir -p $MAVEN_REPO/../backup
@@ -25,6 +27,12 @@ fi
 
 clean_repo
 set -e
+echo installing carbon-parent with us-nexus-mirror settings.
+pwd
+cd us-mirror-test
+../mvnw install:install-file -Dfile=wso2-5.pom -DpomFile=wso2-5.pom -Dmaven.repo.local=$MAVEN_REPO
+
+cd ../ 
 ./mvnw clean install -Dmaven.repo.local=$MAVEN_REPO
 
 echo completed successfully.
