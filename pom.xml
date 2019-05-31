@@ -38,6 +38,7 @@
      <artifactId>org.wso2.carbon.core</artifactId>
      <version>4.4.0</version>
     </dependency>
+      <!--
     <dependency>
      <groupId>org.opensaml</groupId>
      <artifactId>opensaml</artifactId>
@@ -56,6 +57,7 @@
      <version>0.992.0-m1</version>
    </dependency>
   </dependencies>
+   -->
 
 </project>
 
