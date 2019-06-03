@@ -38,6 +38,7 @@
      <artifactId>org.wso2.carbon.core</artifactId>
      <version>4.4.0</version>
     </dependency>
+      <!--
     <dependency>
      <groupId>org.opensaml</groupId>
      <artifactId>opensaml</artifactId>
@@ -46,7 +47,7 @@
 
     <dependency>
      <groupId>org.wso2.carbon.identity.inbound.auth.oauth2</groupId>
-     <artifactId>org.wso2.carbon.identity.oauth.common.feature</artifactId>
+     <artifactId>org.wso2.carbon.identity.oauth.common</artifactId>
      <version>6.0.168</version>
     </dependency>
 
@@ -56,6 +57,7 @@
      <version>0.992.0-m1</version>
    </dependency>
   </dependencies>
+   -->
 
 </project>
 
