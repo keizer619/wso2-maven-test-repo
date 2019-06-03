@@ -1,0 +1,33 @@
+plugins {
+    id 'maven-publish'
+    id 'java'
+}
+
+
+
+
+//            def releasesRepoUrl = "http://maven.wso2.org/nexus/service/local/staging/deploy/maven2/"
+//            def snapshotsRepoUrl = "http://maven.wso2.org/nexus/content/repositories/snapshots/"
+
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            groupId 'org.kasung.test'
+            artifactId 'test-bal'
+            version '0.991.6-SNAPSHOT'
+
+            from components.java
+
+        }
+    }
+    repositories {
+        maven {
+            url "http://maven.wso2.org/nexus/content/repositories/snapshots/"
+            credentials {
+                username project.sonatypeUsername
+                password project.sonatypePassword
+            }
+        }
+    }
+}
