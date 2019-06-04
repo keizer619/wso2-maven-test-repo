@@ -4,8 +4,6 @@ plugins {
     id 'net.researchgate.release' version '2.6.0'
 }
 
-project.version = '0.991.1-SNAPSHOT'
-
 publishing {
     publications {
         mavenJava(MavenPublication) {
