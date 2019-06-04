@@ -4,11 +4,7 @@ plugins {
     id 'net.researchgate.release' version '2.6.0'
 }
 
-
-
-
-//            def releasesRepoUrl = "http://maven.wso2.org/nexus/service/local/staging/deploy/maven2/"
-//            def snapshotsRepoUrl = "http://maven.wso2.org/nexus/content/repositories/snapshots/"
+version '0.991.1-SNAPSHOT'
 
 
 publishing {
@@ -16,8 +12,6 @@ publishing {
         mavenJava(MavenPublication) {
             groupId 'org.kasung.test'
             artifactId 'test-bal'
-            version '0.991.1-SNAPSHOT'
-
             from components.java
 
         }
