@@ -5,3 +5,6 @@
 target
 backup
 anothertarget
+gradle.properties
+.gradle
+build/
