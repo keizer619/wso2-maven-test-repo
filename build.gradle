@@ -4,29 +4,33 @@ plugins {
     id 'net.researchgate.release' version '2.6.0'
 }
 
-publishing {
-    publications {
-        mavenJava(MavenPublication) {
-            groupId 'org.kasung.test'
-            artifactId 'test-bal'
-            from components.java
-
-        }
-    }
-    repositories {
-        maven {
-            if(project.version.endsWith('-SNAPSHOT')) {
-                url "http://maven.wso2.org/nexus/content/repositories/snapshots/"
-            } else {
-                url "http://maven.wso2.org/nexus/service/local/staging/deploy/maven2/"
-            }
-
-            credentials {
-                username project.sonatypeUsername
-                password project.sonatypePassword
+subprojects {
+    publishing {
+        publications {
+            mavenJava(MavenPublication) {
+                groupId 'org.kasung.test'
+                artifactId project.name
+                from components.java
             }
         }
+        repositories {
+            maven {
+                if(project.version.endsWith('-SNAPSHOT')) {
+                    url "http://maven.wso2.org/nexus/content/repositories/snapshots/"
+                } else {
+                    url "http://maven.wso2.org/nexus/service/local/staging/deploy/maven2/"
+                }
+
+                credentials {
+                    username project.sonatypeUsername
+                    password project.sonatypePassword
+                }
+            }
+        }
     }
+
 }
+
+
 
 afterReleaseBuild.dependsOn publish
